@@ -1,0 +1,42 @@
+<html>
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+    <link rel="icon" href="data:,">
+</head>
+<table>
+    <tr>
+        <th>{{index .Header 0}}</th>
+        <th>{{index .Header 1}}</th>
+        <th>{{index .Header 2}}</th>
+        <th>{{index .Header 3}}</th>
+        <th>{{index .Header 4}}</th>
+        <th>{{index .Header 5}}</th>
+    </tr>
+{{range .Contacts}}
+    <tr>
+        <td>{{.Name}}</td>
+        <td>{{.Address}}</td>
+        <td>{{.Postcode}}</td>
+        <td>{{.Phone}}</td>
+        <td>{{.CreditLimit}}</td>
+        <td>{{.Birthday}}</td>
+    </tr>
+{{end}}
+</table>
+</html>
